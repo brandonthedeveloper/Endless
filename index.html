@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Endless</title>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+        <link href="/assets/css/endless.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="logo-container">
+                <div class="logo"></div>
+            </div>
+            <div class="hero">
+                <div class="cta-container">
+                    <div class="cta">
+                        <p>
+                            New Games & Accessories
+                        </p>
+                        <p class="lato-lg">
+                            Monthly packages.<br/>
+                            Excitement delivered daily.
+                        </p>
+                        <p>
+                            What's the best way to shop for the latest video games and peripherals? How about never shopping at all? You'll get new stuff on your doorstep &#8211; every month.
+                        </p>
+                        <div class="cta-button">GET STARTED</div>
+                    </div>
+                </div>
+            </div>
+            <div class="step-container">
+                <h2>How It Works</h2>
+                <div id="app">
+                    <div class="steps">
+                        <template id="template"  v-for="step in steps">
+                            <div class="step">
+                                <div class="step-content">
+                                    <div class="step-number"><span class="h1"> {{ step.stepNumber }}</span></div>
+                                    <div class="title">{{ step.versionContent[0].title }}</div>
+                                    <div class="step-body">{{ step.versionContent[0].body }}</div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="/assets/js/endless.min.js"></script>
+    </body>
+</html>
